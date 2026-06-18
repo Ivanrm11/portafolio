@@ -1,0 +1,161 @@
+/* --- RESETS Y CONFIGURACIÓN GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #111;
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* --- CONTENEDOR PRINCIPAL (Split Screen) --- */
+.container {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* --- SECCIÓN IZQUIERDA --- */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 10% 60px 10%;
+    background-color: #ffffff;
+}
+
+/* Menú de navegación */
+.nav-menu {
+    display: flex;
+    gap: 25px;
+    justify-content: flex-end;
+    font-size: 0.9rem;
+}
+
+.nav-menu a.active {
+    font-weight: 600;
+    border-bottom: 2px solid #111;
+    padding-bottom: 2px;
+}
+
+/* Bloque de texto central */
+.hero-content {
+    margin: auto 0;
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem;
+    line-height: 1.1;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero-content h2 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.hero-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #333;
+    font-weight: 300;
+}
+
+/* Enlace inferior 'Ver CV' */
+.footer-link {
+    font-size: 0.95rem;
+}
+
+.btn-ver-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-ver-cv .arrow {
+    font-size: 1.2rem;
+}
+
+
+/* --- SECCIÓN DERECHA --- */
+.right-section {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px;
+    background-image: url('marmol.png');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Contenedor de la Foto de Perfil - FIJADO EN EL MÁRMOL Y ALINEADO CON NOMBRE */
+.profile-image-container {
+    position: absolute;
+    top: 31%;                 
+    left: 15%;                   
+    width: 45%;               
+    max-width: 320px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* --- ADAPTACIÓN PARA MÓVILES (Responsive) --- */
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left-section {
+        padding: 40px 20px;
+    }
+
+    .nav-menu {
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-content {
+        margin: 40px 0;
+    }
+
+    .right-section {
+        min-height: 500px;
+        padding: 20px;
+    }
+
+    .profile-image-container {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 70%;
+        margin: 40px auto 20px auto;
+    }
+}

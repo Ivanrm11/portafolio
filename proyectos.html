@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iván Rodríguez Moraleda - Proyectos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <!-- SECCIÓN IZQUIERDA -->
+        <section class="left-section" style="overflow-y: auto;">
+            <nav class="nav-menu">
+                <a href="index.html">acerca de</a>
+                <a href="cv.html">CV</a>
+                <a href="proyectos.html" class="active">proyectos</a>
+                <a href="contacto.html">contacto</a>
+            </nav>
+            
+            <div class="hero-content" style="max-width: 100%; margin-top: 20px;">
+                <h1>Proyectos</h1>
+                <h2 style="margin-bottom: 40px;">Desarrollos Recientes</h2>
+
+                <!-- Contenedor de Proyectos -->
+                <div class="projects-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px; padding-right: 20px;">
+                    
+                    <!-- Proyecto 1 - Ejemplo (duplícalo) -->
+                    <div class="project-card">
+                        <h3>Nombre del Proyecto 1</h3>
+                        <p>Descripción breve del proyecto. Qué hace, para qué sirve y qué problema resuelve.</p>
+                        <div class="tech-tags">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="#" class="btn-project">Ver Código</a>
+                            <a href="#" class="btn-project">Ver Demo</a>
+                        </div>
+                    </div>
+
+                    <!-- Proyecto 2 -->
+                    <div class="project-card">
+                        <h3>Nombre del Proyecto 2</h3>
+                        <p>Descripción breve del proyecto. Qué hace, para qué sirve y qué problema resuelve.</p>
+                        <div class="tech-tags">
+                            <span>C#</span>
+                            <span>.NET</span>
+                            <span>SQL Server</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="#" class="btn-project">Ver Código</a>
+                            <a href="#" class="btn-project">Ver Demo</a>
+                        </div>
+                    </div>
+
+                    <!-- Añade más tarjetas aquí duplicando el bloque -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DERECHA -->
+        <section class="right-section">            
+            <div class="profile-image-container">
+                <img src="gumball.jpg" alt="Iván Rodríguez Moraleda" class="profile-img">
+            </div>
+        </section>
+    </main>
+
+    <style>
+        /* Estilos específicos para proyectos */
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 28px 24px;
+            transition: all 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-color: #ddd;
+        }
+        .project-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .project-card p {
+            color: #444;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .tech-tags {
+            margin-bottom: 20px;
+        }
+        .tech-tags span {
+            background: #f5f5f5;
+            color: #333;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-right: 8px;
+            display: inline-block;
+            margin-bottom: 6px;
+        }
+        .project-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        .btn-project {
+            flex: 1;
+            text-align: center;
+            padding: 10px 16px;
+            border: 1px solid #111;
+            color: #111;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn-project:hover {
+            background: #111;
+            color: white;
+        }
+    </style>
+</body>
+</html>
