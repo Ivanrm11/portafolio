@@ -2,7 +2,7 @@
 
 ¡Bienvenido/a a mi repositorio! Este proyecto es mi portafolio digital personal, diseñado y desarrollado desde cero para mostrar mi perfil profesional, habilidades técnicas y los proyectos en los que trabajo como desarrollador.
 
-Puedes ver la web en vivo aquí: **[👉 Enlace a mi GitHub Pages]()
+Puedes ver la web en vivo aquí: **[👉 Enlace a mi GitHub Pages]( https://ivanrm11.github.io/portafolio/)
 
 ---
 
