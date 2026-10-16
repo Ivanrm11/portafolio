@@ -12,13 +12,19 @@
 <body>
 
     <main class="container">
-        <!-- SECCIÓN IZQUIERDA (Texto y Contenido) -->
         <section class="left-section">
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav class="nav-menu">
-                <a href="#" class="active">acerca de</a>
+                <a href="#" class="active">Acerca de</a>
                 <a href="cv.html">CV</a>
-                <a href="proyectos.html">proyectos</a>
-                <a href="contacto.html">contacto</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html">Contacto</a>
             </nav>
 
             <div class="hero-content">
@@ -34,20 +40,18 @@
 
             <div class="footer-link">
                 <a href="#" onclick="irAlCV(event)" class="btn-ver-cv"> 
-		    Ver CV <span class="arrow">↓</span>
-		</a>
+                    Ver CV <span class="arrow">↓</span>
+                </a>
             </div>
         </section>
 
-        <!-- SECCIÓN DERECHA (Mármol + Foto) -->
-        <section class="right-section">          
-            
-           <!-- La foto ahora vive AQUÍ, blindada dentro del lado del mármol -->
+        <section class="right-section">      
            <div class="profile-image-container">
                 <img src="gumball.jpg" alt="Iván Rodríguez Moraleda" class="profile-img">
             </div>
         </section>
     </main>
+
 <script>
     function irAlCV(e) {
         e.preventDefault();
@@ -58,6 +62,26 @@
             window.location.href = 'cv.html';
         }, 600);
     }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                navMenu.classList.toggle('open');
+            });
+
+            const menuLinks = navMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('open');
+                    navMenu.classList.remove('open');
+                });
+            });
+        }
+    });
 </script>
 </body>
 </html>
