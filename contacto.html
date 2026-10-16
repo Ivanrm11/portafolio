@@ -11,13 +11,19 @@
 </head>
 <body>
     <main class="container">
-        <!-- SECCIÓN IZQUIERDA -->
         <section class="left-section">
+            
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav class="nav-menu">
-                <a href="index.html">acerca de</a>
+                <a href="index.html">Acerca de</a>
                 <a href="cv.html">CV</a>
-                <a href="proyectos.html">proyectos</a>
-                <a href="contacto.html" class="active">contacto</a>
+                <a href="proyectos.html">Proyectos</a>
+                <a href="contacto.html" class="active">Contacto</a>
             </nav>
             
             <div class="hero-content">
@@ -36,7 +42,7 @@
                     <a href="mailto:ivannnrm11@gmail.com" style="color: #111;">ivannnrm11@gmail.com</a><br><br>
                     
                     <strong>Dirección:</strong><br>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Consuegra%2C+Toledo" 
+                    <a href="https://maps.google.com" 
                        target="_blank" 
                        style="color: #111; text-decoration: underline;">
                         Consuegra, Toledo
@@ -51,7 +57,6 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DERECHA -->
         <section class="right-section">          
             <div class="profile-image-container">
                 <img src="gumball.jpg" alt="Iván Rodríguez Moraleda" class="profile-img">
@@ -59,11 +64,31 @@
         </section>
     </main>
 
-    <script>
-        function enviarMensaje() {
-            const email = "ivannnrm11@gmail.com"; 
-            window.location.href = `mailto:${email}?subject=Contacto%20desde%20portafolio&body=Hola%20Iván,%20me%20gustaría...`;
+<script>
+    function enviarMensaje() {
+        const email = "ivannnrm11@gmail.com"; 
+        window.location.href = `mailto:${email}?subject=Contacto%20desde%20portafolio&body=Hola%20Iván,%20me%20gustaría...`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        if (menuToggle && navMenu) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('open');
+                navMenu.classList.toggle('open');
+            });
+
+            const menuLinks = navMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('open');
+                    navMenu.classList.remove('open');
+                });
+            });
         }
-    </script>
+    });
+</script>
 </body>
 </html>
