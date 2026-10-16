@@ -26,7 +26,6 @@ a:hover {
     opacity: 0.7;
 }
 
-/* Ocultar botón hamburguesa por defecto en PC */
 .menu-toggle {
     display: none;
 }
@@ -51,11 +50,11 @@ a:hover {
     flex-direction: column;
     padding: 40px 10% 60px 10%;
     background-color: #ffffff;
-    overflow-y: auto;           /* Scroll interno */
-    height: 100vh;              /* Importante para mantener altura */
+    overflow-y: auto;           
+    height: 100vh;              
 }
 
-/* Menú de navegación en PC */
+
 .nav-menu {
     display: flex;
     gap: 25px;
@@ -70,7 +69,7 @@ a:hover {
     padding-bottom: 2px;
 }
 
-/* Contenido central */
+
 .hero-content {
     margin: auto 0;
     max-width: 500px;
@@ -106,10 +105,9 @@ a:hover {
     background-image: url('marmol.png');
     background-size: cover;
     background-position: center;
-    flex-shrink: 0;             /* Evita que se encoja */
+    flex-shrink: 0;             
 }
 
-/* Foto de perfil */
 .profile-image-container {
     position: absolute;
     top: 31%;
@@ -247,7 +245,7 @@ a:hover {
         position: relative;
     }
 
-    /* Contenedor de la foto de Gumball */
+    
     .profile-image-container {
         position: absolute;
         top: 60px; 
@@ -281,10 +279,10 @@ a:hover {
         background: transparent;
         border: none;
         cursor: pointer;
-        z-index: 100; /* Asegura quedar por encima de todo el contenido */
+        z-index: 100; 
     }
 
-    /* Las 3 líneas físicas de la hamburguesa */
+    
     .menu-toggle span {
         width: 100%;
         height: 2px;
@@ -292,7 +290,7 @@ a:hover {
         transition: transform 0.3s ease, opacity 0.3s ease;
     }
 
-    /* Animación dinámica a 'X' cuando tiene la clase activa .open */
+    
     .menu-toggle.open span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
@@ -305,7 +303,7 @@ a:hover {
 
     /* ==================== MENÚ DESPLEGABLE MÓVIL ==================== */
     .nav-menu {
-        display: flex !important; /* Fuerza flex sobreescribiendo el PC layout */
+        display: flex !important; 
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -318,19 +316,19 @@ a:hover {
         z-index: 90;
         margin-bottom: 0;
 
-        /* FONDO MÁRMOL CON CAPA EN CLARO: Estética elegante con legibilidad del 100% */
+        
         background: linear-gradient(rgba(255, 255, 255, 0.50), rgba(255, 255, 255, 0.88)), url('marmol.png');
         background-size: cover;
         background-position: center;
 
-        /* Estado inicial del menú plegado (oculto) */
+        
         opacity: 0;
         pointer-events: none;
         transform: translateY(-20px);
         transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.76, 0, 0.24, 1);
     }
 
-    /* Estado de visualización cuando el menú móvil se activa */
+
     .nav-menu.open {
         opacity: 1;
         pointer-events: auto;
@@ -430,10 +428,10 @@ a:hover {
     .container::after {
         content: "";
         width: 100%;
-        height: 12px; /* Grosor refinado de 12px como cierre estético */
+        height: 12px; 
         background-image: url('marmol.png');
         background-size: cover;
         background-position: center;
-        margin-top: auto; /* Empuja la franja automáticamente al fondo de la estructura */
+        margin-top: auto; 
     }
 }
