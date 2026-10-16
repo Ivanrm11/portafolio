@@ -86,6 +86,7 @@
     </main>
 
 <script>
+    // Lógica interactiva para el Menú Hamburguesa en Móviles
     document.addEventListener('DOMContentLoaded', () => {
         const menuToggle = document.querySelector('.menu-toggle');
         const navMenu = document.querySelector('.nav-menu');
@@ -96,6 +97,7 @@
                 navMenu.classList.toggle('open');
             });
 
+            // Cierra el menú al hacer clic en cualquier enlace
             const menuLinks = navMenu.querySelectorAll('a');
             menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
