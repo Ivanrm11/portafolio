@@ -16,7 +16,7 @@ Soy técnico superior en Desarrollo de Aplicaciones Multiplataforma (DAM). Disfr
 
 En este portafolio y en mi día a día formativo utilizo:
 
-*   **Frontend: HTML5, CSS3 (Flexbox, Grid, Animaciones), JavaScript (ES6+).
-*   **Backend & Multiplataforma: Java, C# (.NET).
+*   **Frontend: HTML5, CSS3, JavaScript.
+*   **Backend & Multiplataforma: Java, C#.
 *   **Bases de Datos: MySQL, SQL Server.
 *   **Control de Versiones: Git & GitHub.
